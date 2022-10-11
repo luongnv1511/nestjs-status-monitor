@@ -13,8 +13,11 @@ Chart.defaults.global.elements.line.backgroundColor = 'rgba(0,0,0,0)';
 Chart.defaults.global.elements.line.borderColor = 'rgba(0,0,0,0.9)';
 Chart.defaults.global.elements.line.borderWidth = 2;
 
-var serverUrl = location.protocol + '//' + location.hostname + ':' + (port || location.port);
-var socket = io(serverUrl + '/status-monitor');
+var serverUrl = location.protocol + '//' + location.hostname;
+if (location.port) {
+  serverUrl + ':' + (location.port);
+}
+var socket = io(serverUrl + pathName + '/status-monitor');
 fetchAndRefresh();
 
 var defaultSpan = 0;
@@ -147,7 +150,7 @@ var onSpanChange = function (e) {
 };
 
 function fetchAndRefresh(){
-  fetch(serverUrl + location.pathname + '/data')
+  fetch(serverUrl + pathName + '/status/data')
   .then(response => response.json())
   .then(refreshData)
   .catch(console.error);

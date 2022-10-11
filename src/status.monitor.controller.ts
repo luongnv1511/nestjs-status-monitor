@@ -30,6 +30,7 @@ export class StatusMonitorController {
     this.data = {
       title: config.title,
       port: config.port,
+      pathName: config.pathName,
       socketPath: config.socketPath,
       bodyClasses: bodyClasses,
       socketScript: fs.readFileSync(
