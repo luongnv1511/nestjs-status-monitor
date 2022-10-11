@@ -32,6 +32,9 @@ export class StatusMonitorController {
       port: config.port,
       socketPath: config.socketPath,
       bodyClasses: bodyClasses,
+      socketScript: fs.readFileSync(
+        path.join(__dirname, '../src/public/javascripts/socket.io.js'),
+      ),
       script: fs.readFileSync(
         path.join(__dirname, '../src/public/javascripts/app.js'),
       ),

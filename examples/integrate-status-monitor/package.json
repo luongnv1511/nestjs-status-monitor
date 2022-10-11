@@ -1,6 +1,6 @@
 {
-  "name": "integrate-status-monitor",
-  "version": "1.0.2",
+  "name": "@luongnv/nestjs-status-monitor",
+  "version": "1.0.0",
   "description": "Example how to use status monitor module",
   "main": "dist/main.js",
   "author": "honnamkuan",
@@ -66,5 +66,16 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luongnv1511/nestjs-status-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luongnv1511/nestjs-status-monitor/issues"
+  },
+  "homepage": "https://github.com/luongnv1511/nestjs-status-monitor#readme"
 }
